@@ -19,3 +19,9 @@ You get the following advantages:
 * Delta updates with [AppImageUpdate](https://github.com/AppImageCommunity/AppImageUpdate). This means **you don't download the entire application again with an update, but only the diff.** Also see our [fork](https://github.com/pkgforge-dev/AppImageUpdate-Enhanced-Edition) used by AM.
 
 * It uses the [uruntime](https://github.com/VHSgunzo/uruntime), which makes this AppImage able to work without FUSE on the host at all, **as well as have startup time as fast as if the binary was extracted on the system.**
+
+<details>
+  <summary><b><i>raison d'être</i></b></summary>
+    <img src="https://github.com/user-attachments/assets/d40067a6-37d2-4784-927c-2c7f7cc6104b" alt="Inspiration Image">
+  </a>
+</details>
