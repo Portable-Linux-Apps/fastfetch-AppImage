@@ -7,6 +7,12 @@ This repo takes the [official fastfetch binaries ](https://github.com/fastfetch-
 
 No libraries or other dependencies are bundled in, since the official binaries are already portable enough.
 
+[polyfill-glibc](https://github.com/corsix/polyfill-glibc) is used to allow fastfetch to run on: 
+
+* **glibc 2.17** ~ubuntu 14.04 era for `x86_64`.
+
+* **glibc 2.28** ~ubuntu 19.04 era for `aarch64`.
+
 -----------------------------------------------------------------------------------------------------------------
 
 # Why should I use this? 

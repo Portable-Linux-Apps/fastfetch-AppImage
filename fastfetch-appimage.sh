@@ -11,6 +11,9 @@ export URUNTIME_PRELOAD=1 # really needed here
 # fastfetch uses amd64 instead of x86_64
 if [ "$(uname -m)" = 'x86_64' ]; then
 	ARCH=amd64
+	glibcver=2.17
+else
+	glibcver=2.28
 fi
 
 tarball_url=$(wget "$REPO" -O - | sed 's/[()",{} ]/\n/g' \
@@ -46,9 +49,15 @@ Categories=System
 Hidden=true' > ./AppDir/fastfetch.desktop
 touch ./AppDir/fastfetch.png ./AppDir/.DirIcon
 
+# get polyfil glibc so that fastfetch can work on older distros
+
+git clone https://github.com/corsix/polyfill-glibc.git && (
+	cd ./polyfill-glibc
+	ninja polyfill-glibc
+)
+./polyfill-glibc/polyfill-glibc --target-glibc="$glibcver" ./AppDir/usr/bin/*
 
 wget "$APPIMAGETOOL" -O ./appimagetool
 chmod +x ./appimagetool
 ./appimagetool -n -u "$UPINFO" ./AppDir
-
 
