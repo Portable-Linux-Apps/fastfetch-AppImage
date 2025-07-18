@@ -1,4 +1,7 @@
-# fastfetch-AppImage
+# fastfetch-AppImage 🐧
+
+[![GitHub Downloads](https://img.shields.io/github/downloads/Portable-Linux-Apps/fastfetch-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/Portable-Linux-Apps/fastfetch-AppImage/releases/latest)
+[![CI Build Status](https://github.com//Portable-Linux-Apps/fastfetch-AppImage/actions/workflows/blank.yml/badge.svg)](https://github.com/Portable-Linux-Apps/fastfetch-AppImage/releases/latest)
 
 This repo takes the [official fastfetch binaries ](https://github.com/fastfetch-cli/fastfetch/releases) and turns them into an AppImage. 
 
