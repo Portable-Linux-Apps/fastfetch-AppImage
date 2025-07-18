@@ -25,7 +25,7 @@ jobs:
 
     - name: Make AppImage
       run: |
-        sudo apt install wget tar
+        sudo apt install wget tar git ninja-build 
         chmod +x ./*-appimage.sh 
         ./*-appimage.sh
         mkdir dist
