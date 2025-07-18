@@ -55,7 +55,7 @@ git clone https://github.com/corsix/polyfill-glibc.git && (
 if [ "$(uname -m)" = 'x86_64' ]; then
 	./polyfill-glibc/polyfill-glibc --target-glibc=2.17 ./AppDir/usr/bin/*
 else
-	./polyfill-glibc/polyfill-glibc --target-glibc=2.20 ./AppDir/usr/bin/*
+	./polyfill-glibc/polyfill-glibc --target-glibc=2.28 ./AppDir/usr/bin/*
 fi
 
 wget "$APPIMAGETOOL" -O ./appimagetool
