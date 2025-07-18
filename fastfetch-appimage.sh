@@ -50,9 +50,8 @@ touch ./AppDir/fastfetch.png ./AppDir/.DirIcon
 git clone https://github.com/corsix/polyfill-glibc.git && (
 	cd ./polyfill-glibc
 	ninja polyfill-glibc
-	mv ./polyfill-glibc ../
 )
-./polyfill-glibc --target-glibc=2.17 ./AppDir/usr/bin/*
+./polyfill-glibc/polyfill-glibc --target-glibc=2.17 ./AppDir/usr/bin/*
 
 
 wget "$APPIMAGETOOL" -O ./appimagetool
