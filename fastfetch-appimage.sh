@@ -47,12 +47,15 @@ Hidden=true' > ./AppDir/fastfetch.desktop
 touch ./AppDir/fastfetch.png ./AppDir/.DirIcon
 
 # get polyfil glibc so that fastfetch can work on older distros
+
+git clone https://github.com/corsix/polyfill-glibc.git && (
+	cd ./polyfill-glibc
+	ninja polyfill-glibc
+)
 if [ "$(uname -m)" = 'x86_64' ]; then
-	git clone https://github.com/corsix/polyfill-glibc.git && (
-		cd ./polyfill-glibc
-		ninja polyfill-glibc
-	)
 	./polyfill-glibc/polyfill-glibc --target-glibc=2.17 ./AppDir/usr/bin/*
+else
+	./polyfill-glibc/polyfill-glibc --target-glibc=2.20 ./AppDir/usr/bin/*
 fi
 
 wget "$APPIMAGETOOL" -O ./appimagetool
