@@ -19,7 +19,7 @@ No libraries or other dependencies are bundled in, since the official binaries a
 
 You get the following advantages: 
 
-* Easy integration into the system using AppImage integration tools like [AM](https://github.com/ivan-hc/AM), [soar](https://github.com/pkgforge-dev/soar), [dbin](https://github.com/xplshn/dbin) and others.
+* Easy integration into the system using AppImage integration tools like [AM](https://github.com/ivan-hc/AM), [soar](https://github.com/pkgforge/soar), [dbin](https://github.com/xplshn/dbin) and others.
 
 * Less storage usage since the AppImage sits compressed on disk while the tarball has to be extracted.
 
